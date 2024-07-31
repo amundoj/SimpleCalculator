@@ -1,0 +1,14 @@
+C:\Users\Bruker01\Documents\CalculatorC#\SimpleCalculator\SimpleCalculatorGUI\bin\Debug\net8.0-windows\SimpleCalculatorGUI.exe
+C:\Users\Bruker01\Documents\CalculatorC#\SimpleCalculator\SimpleCalculatorGUI\bin\Debug\net8.0-windows\SimpleCalculatorGUI.deps.json
+C:\Users\Bruker01\Documents\CalculatorC#\SimpleCalculator\SimpleCalculatorGUI\bin\Debug\net8.0-windows\SimpleCalculatorGUI.runtimeconfig.json
+C:\Users\Bruker01\Documents\CalculatorC#\SimpleCalculator\SimpleCalculatorGUI\bin\Debug\net8.0-windows\SimpleCalculatorGUI.dll
+C:\Users\Bruker01\Documents\CalculatorC#\SimpleCalculator\SimpleCalculatorGUI\bin\Debug\net8.0-windows\SimpleCalculatorGUI.pdb
+C:\Users\Bruker01\Documents\CalculatorC#\SimpleCalculator\SimpleCalculatorGUI\obj\Debug\net8.0-windows\SimpleCalculatorGUI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Bruker01\Documents\CalculatorC#\SimpleCalculator\SimpleCalculatorGUI\obj\Debug\net8.0-windows\SimpleCalculatorGUI.AssemblyInfoInputs.cache
+C:\Users\Bruker01\Documents\CalculatorC#\SimpleCalculator\SimpleCalculatorGUI\obj\Debug\net8.0-windows\SimpleCalculatorGUI.AssemblyInfo.cs
+C:\Users\Bruker01\Documents\CalculatorC#\SimpleCalculator\SimpleCalculatorGUI\obj\Debug\net8.0-windows\SimpleCalculatorGUI.csproj.CoreCompileInputs.cache
+C:\Users\Bruker01\Documents\CalculatorC#\SimpleCalculator\SimpleCalculatorGUI\obj\Debug\net8.0-windows\SimpleCalculatorGUI.dll
+C:\Users\Bruker01\Documents\CalculatorC#\SimpleCalculator\SimpleCalculatorGUI\obj\Debug\net8.0-windows\refint\SimpleCalculatorGUI.dll
+C:\Users\Bruker01\Documents\CalculatorC#\SimpleCalculator\SimpleCalculatorGUI\obj\Debug\net8.0-windows\SimpleCalculatorGUI.pdb
+C:\Users\Bruker01\Documents\CalculatorC#\SimpleCalculator\SimpleCalculatorGUI\obj\Debug\net8.0-windows\SimpleCalculatorGUI.genruntimeconfig.cache
+C:\Users\Bruker01\Documents\CalculatorC#\SimpleCalculator\SimpleCalculatorGUI\obj\Debug\net8.0-windows\ref\SimpleCalculatorGUI.dll
