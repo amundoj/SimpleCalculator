@@ -21,99 +21,65 @@ namespace SimpleCalculatorGUI
             display.Width = 260;
             display.ReadOnly = true;
             display.TextAlign = HorizontalAlignment.Right;
+            display.Font = new System.Drawing.Font("Arial", 18);
+            display.Height = 40;
             Controls.Add(display);
 
-            // Initialize buttons
+            // Initialize TableLayoutPanel for buttons
+            TableLayoutPanel tableLayout = new TableLayoutPanel();
+            tableLayout.RowCount = 5;
+            tableLayout.ColumnCount = 4;
+            tableLayout.Location = new System.Drawing.Point(10, 60);
+            tableLayout.Width = 260;
+            tableLayout.Height = 300;
+            tableLayout.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;
+            tableLayout.AutoSize = true;
+            tableLayout.ColumnStyles.Clear();
+            tableLayout.RowStyles.Clear();
+            for (int i = 0; i < 4; i++)
+                tableLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
+            for (int i = 0; i < 5; i++)
+                tableLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
+            
             string[] buttons = { "7", "8", "9", "/", "4", "5", "6", "*", "1", "2", "3", "-", "0", "C", "=", "+" };
-            int xPos = 10, yPos = 50;
 
             foreach (string btnText in buttons)
             {
                 Button btn = new Button();
                 btn.Text = btnText;
-                btn.Width = 60;
-                btn.Height = 40;
-                btn.Left = xPos;
-                btn.Top = yPos;
+                btn.Font = new System.Drawing.Font("Arial", 16);
+                btn.Dock = DockStyle.Fill;
                 btn.Click += Button_Click;
-                Controls.Add(btn);
-
-                xPos += 65;
-                if (xPos > 250)
-                {
-                    xPos = 10;
-                    yPos += 45;
-                }
+                tableLayout.Controls.Add(btn);
             }
-        }
 
-        private string input = "";
-        private string operation = "";
-        private double result = 0;
+            Controls.Add(tableLayout);
+        }
 
         private void Button_Click(object sender, EventArgs e)
         {
             Button btn = sender as Button;
+            string buttonText = btn.Text;
 
-            if (btn.Text == "C")
+            if (buttonText == "C")
             {
-                display.Text = "";
-                input = "";
-                operation = "";
-                result = 0;
-                return;
+                display.Clear();
             }
-
-            if (btn.Text == "=")
+            else if (buttonText == "=")
             {
-                if (!string.IsNullOrEmpty(input))
+                try
                 {
-                    Calculate();
-                    display.Text = result.ToString();
-                    input = result.ToString();
-                    operation = "";
-                }
-                return;
-            }
-
-            if ("+-*/".Contains(btn.Text))
-            {
-                if (!string.IsNullOrEmpty(operation) && !string.IsNullOrEmpty(input))
-                {
-                    Calculate();
+                    var result = new System.Data.DataTable().Compute(display.Text, null);
                     display.Text = result.ToString();
                 }
-                operation = btn.Text;
-                result = double.Parse(input);
-                input = "";
-                return;
-            }
-
-            input += btn.Text;
-            display.Text = input;
-        }
-
-        private void Calculate()
-        {
-            if (!string.IsNullOrEmpty(input))
-            {
-                double secondOperand = double.Parse(input);
-
-                switch (operation)
+                catch
                 {
-                    case "+":
-                        result += secondOperand;
-                        break;
-                    case "-":
-                        result -= secondOperand;
-                        break;
-                    case "*":
-                        result *= secondOperand;
-                        break;
-                    case "/":
-                        result /= secondOperand;
-                        break;
+                    display.Text = "Error";
                 }
+            }
+            else
+            {
+                display.Text += buttonText;
             }
         }
     }
